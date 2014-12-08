@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataObject>
+	<DataType>average_land_GDP</DataType>
+	<DataResource>
+		<ResourceId>2</ResourceId>
+		<ResourceName>上海统计</ResourceName>
+		<ResourceDes>上海市城市信息数据</ResourceDes>
+		<ResourceLoc>www.stats-sh.gov.cn</ResourceLoc>
+	</DataResource>	
+	<AttributeSet>
+		<Attribute name="city">Shanghai</Attribute>
+		<Attribute name="index">average_land_GDP</Attribute>
+		<Attribute name="year">2014</Attribute>
+		<Attribute name="quarter">1</Attribute>
+		<Attribute name="value">0.838</Attribute>
+		<Attribute name="unit">亿元/平方公里</Attribute>	
+	</AttributeSet>
+	<BuildTime>2014-04-01 18:52:00</BuildTime>
+</DataObject>
+
+<Rule>
+	<RuleID>025</RuleID>
+	<TrigEventSet>
+		<EventId>011</EventId>
+		<EventId>012</EventId>
+		<EventId>013</EventId>
+		<EventId>014</EventId>
+	</TrigEventSet>
+	<Condition>
+		<AND>
+			<EQUAL ref="012.year">011.year</EQUAL>
+			<EQUAL ref="013.year">011.year</EQUAL>
+			<EQUAL ref="014.year">011.year</EQUAL>
+		<AND>
+	</Condition>
+	<Action>
+		<ExportEvent>
+			<EventId>05</EventId>
+			<EventType>system_event</EventType>
+		</ExportEvent>
+	</Action>
+</Rule>
+
+<Event>
+	<EventId>010</EventId>
+	<EventType>resource_event</EventType>
+	<DataResource>
+		<ResourceId>2</ResourceId>
+		<ResourceName>上海统计</ResourceName>
+		<ResourceDes>上海市城市信息数据</ResourceDes>
+		<ResourceLoc>www.stats-sh.gov.cn</ResourceLoc>
+	</DataResource>
+	<InputEventSet></InputEventSet>
+	<OutputEvent>
+		<EventMsgId>11</EventMsgId>
+		<AttributeSet>
+			<Attribute name="city">Shanghai</Attribute>
+			<Attribute name="index">GDP</Attribute>
+			<Attribute name="year">2014</Attribute>
+			<Attribute name="quarter">3</Attribute>
+			<Attribute name="value">5313.07</Attribute>
+			<Attribute name="unit">亿</Attribute>	
+		</AttributeSet>
+		<EventMsgTime>2014-10-01 16:23:22</EventMsgTime>
+	</OutputEvent>
+</Event>
+
+//城乡收入差距
+<Event>
+	<EventId>012</EventId>
+	<EventType>resource_event</EventType>
+	<DataResource>
+		<ResourceId>2</ResourceId>
+		<ResourceName>上海统计</ResourceName>
+		<ResourceDes>上海市城市信息数据</ResourceDes>
+		<ResourceLoc>www.stats-sh.gov.cn</ResourceLoc>
+	</DataResource>
+	<InputEventSet></InputEventSet>
+	<OutputEvent>
+		<EventMsgId>12</EventMsgId>
+		<AttributeSet>
+			<Attribute name="city">Shanghai</Attribute>
+			<Attribute name="index">URIncomeGap</Attribute>
+			<Attribute name="year">2014</Attribute>
+			<Attribute name="quarter">1</Attribute>
+			<Attribute name="URIncomeGapValue">2012</Attribute>
+			<Attribute name="unit">元/月</Attribute>	
+		</AttributeSet>
+		<EventMsgTime>2014-04-01 16:23:22</EventMsgTime>
+	</OutputEvent>
+</Event>
+
+
+	<AttributeSet>
+		<Attribute name="city">Shanghai</Attribute>
+		<Attribute name="index">ALGDP</Attribute>
+		<Attribute name="year">2014</Attribute>
+		<Attribute name="quarter">1</Attribute>
+		<Attribute name="value">0.838</Attribute>
+		<Attribute name="unit">亿元/平方公里</Attribute>	
+	</AttributeSet>

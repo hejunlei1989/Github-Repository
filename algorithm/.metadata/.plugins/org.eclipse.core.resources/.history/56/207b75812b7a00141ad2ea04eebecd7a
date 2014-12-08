@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataObject>
+	<DataType>average_land_GDP</DataType>
+	<DataResource>
+		<ResourceId>2</ResourceId>
+		<ResourceName>上海统计</ResourceName>
+		<ResourceDes>上海市城市信息数据</ResourceDes>
+		<ResourceLoc>www.stats-sh.gov.cn</ResourceLoc>
+	</DataResource>	
+	<AttributeSet>
+		<Attribute name="city">Shanghai</Attribute>
+		<Attribute name="index">average_land_GDP</Attribute>
+		<Attribute name="year">2014</Attribute>
+		<Attribute name="quarter">1</Attribute>
+		<Attribute name="value">0.838</Attribute>
+		<Attribute name="unit">亿元/平方公里</Attribute>	
+	</AttributeSet>
+	<BuildTime>2014-04-01 18:52:00</BuildTime>
+</DataObject>
+
+<Rule>
+	<RuleID>005</RuleID>
+	<TrigEventSet>
+		<EventId>011</EventId>
+		<EventId>012</EventId>
+		<EventId>013</EventId>
+		<EventId>014</EventId>
+	</TrigEventSet>
+	<Condition>
+		<AND>
+			
+		<AND>
+	</Condition>
+</Rule>
+
